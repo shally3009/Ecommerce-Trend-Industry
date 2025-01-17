@@ -1,7 +1,7 @@
 
-# Ecommerce Follow Along
+# Ecommerce TrendIndustry
 
-Welcome to the **Ecommerce Follow Along** repository! This project is designed to guide you through the development of a fully functional ecommerce platform, providing hands-on experience in building real-world applications using modern web technologies.
+Welcome to the **Ecommerce TrendIndustry** repository! This project is designed to guide you through the development of a fully functional ecommerce platform, providing hands-on experience in building real-world applications using modern web technologies.
 
 ## Project Description
 
