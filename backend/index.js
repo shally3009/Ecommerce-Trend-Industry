@@ -26,3 +26,10 @@ app.listen(PORT,async()=>{
         console.log(err);
     }
 });
+
+app.use('/auth', userrouter);
+app.use('/product', productrouter);
+
+app.get('/',(req,res)=>{
+    res.send("Product route")
+})
