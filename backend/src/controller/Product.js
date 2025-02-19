@@ -20,9 +20,37 @@ const productrouter = Router();
         res.status(200).json({products:products});
     }
     catch(err){
-        console.log(err)
+        console.log(err);
+        res.status(500).json({message:"Server error"});
     }
-    })
+    });
+
+    productrouter.post('/cart',async(req,res)=>{
+        const {email,productid,quantity}=req.body;
+        try{
+            if(!email){
+                return res.status(404).json({"fill all inputbox"})
+        }
+        const findemail=await userModel.findOne({email:email})
+        if(!findemail){
+            return res.status(440).json({"user does not exist"})
+        }
+        if((!mongoose.types.ObjectId.isValid(productid))){
+            return res.status(400).json({message:"product is not there"})
+        }
+        if(!quantity&& quantity<=0){
+            return res.status(400).json({message:"quantity is not there"})
+
+        
+    
+        
+        
+          const findproduct=await productModel.findById(productid)
+        if(!findproduct){
+            return res.status(404).json({message:"product is not exist"})
+        }
+        const cartproductid=await userModel.cart
+
     productrouter.post("/post-product", productupload.array('files'), async (req, res) => {
         const { name, price, description, category, tags, stock, email } = req.body;
         const images = req.files.map(file => file.path);
