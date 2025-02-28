@@ -17,6 +17,7 @@ function App() {
       <Route path="/Productform" element={<Productform/>}/>
       <Route path="/my-product" element={<Productcardforseller/>}/>
       <Route path="/navbar" element={<Navbar/>}/>
+      <Route path ='/Cart' element={<Cart/>}/>
     </Routes>
     </>
   )
