@@ -22,6 +22,7 @@ function App() {
         <Route path="/product/:id" element={<Singleproductpage/>}/>
         <Route path='/cart'  element={<Cart/>}/>
         <Route path='/selectadress' element={<SelectAddress/>}/>
+        <Route path='/Orderconfirmation' element={<OrderConfirmation/>}/>
       </Routes>
     </>
   );
