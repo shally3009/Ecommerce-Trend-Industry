@@ -13,7 +13,7 @@ userrouter.post("/create-user",upload.single("file"), async(req,res)=>{
       }
 
       const filename = req.file.filename ; 
-      const fileUrl = path.join(filename);
+      const fileUrl = path.join(filename);ua?
 
       bcrypt.hash(password, 10, async function(err, hash) {
       
@@ -80,5 +80,19 @@ const productrouter = Router();
             console.log(err);
         }
     })
+    userRouter.post('/address', async (req, res) => {
+        const { address, city, state, zip, country } = req.body;
+        try {
+            if (!address || !city || !state || !zip || !country) {
+                return res.status(400).json({ message: "Fill all fields" });
+            }
+            const addressDetails = new addressModel({ address, city, state, zip, country });
+            await addressDetails.save();
+            res.status(200).json({ message: "Address added successfully" });
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ message: "Internal Server Error" });
+        }
+    });
 
-    module.exports = productrouter;
+    module.exports =  productrouter;
