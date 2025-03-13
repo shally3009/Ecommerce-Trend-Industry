@@ -23,6 +23,7 @@ function App() {
         <Route path='/cart'  element={<Cart/>}/>
         <Route path='/selectadress' element={<SelectAddress/>}/>
         <Route path='/Orderconfirmation' element={<OrderConfirmation/>}/>
+        <Route path='/Orderhistory' element={<Orderhistory/>}/>
       </Routes>
     </>
   );
