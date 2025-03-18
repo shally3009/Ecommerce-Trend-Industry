@@ -131,52 +131,5 @@ Navbar Creation: Developed a persistent navigation bar that appears on all pages
 NavLinks Added: Included links to Home, Product Form, Login, and Sign Up pages for easy access.
 Styling: Utilized Tailwind CSS to ensure a responsive and visually appealing design.
 
-## Milestone 16: Single Product Detail Page
 
-SingleProduct.jsx: Developed a dedicated page to display detailed information about individual products.
-Routing: Configured routes to navigate to the Single Product page from the product listings.
-Enhancements: Made minor adjustments to improve user experience across the site.
 
-## Milestone 17 & 18: Cart Functionality Development
-
-Cart Schema: Extended the existing schema to include cart details for each user.
-Post Request: Created an endpoint to handle adding products to the user's cart and storing them in the database.
-Multer Integration: Ensured image uploads function correctly within the cart system.
-
-### Milestone 19: Cart Page Implementation
-
-Cart Components: Developed Cart.jsx and CartComponent.jsx to render the cart interface.
-Data Fetching: Implemented fetch requests to retrieve and display products in the user's cart.
-Quantity Management: Added functionality to adjust product quantities using increment and decrement buttons.
-
-## Milestone 20: User Profile Page
-
-Profile Endpoint: Established an endpoint to retrieve and send user data to the frontend.
-Profile.jsx: Created a profile page to display user information, enhancing personalization.
-
-## Milestone 21: Address Form Creation
-
-Address.jsx: Developed a form for users to input address details, including country, state, and pincode.
-State Management: Utilized useState hook to manage form inputs.
-Form Submission: Implemented Axios to send address data to the backend and navigate to the profile page upon submission.
-
-## Milestone 22: Address Data Handling
-
-Backend Endpoint: Created an endpoint to receive and store address data from the frontend.
-JWT Authentication: Implemented JSON Web Tokens to authenticate address submissions securely.
-
-## Milestone 23: Order Placement Workflow
-
-Place Order Button: Added functionality in the cart page to initiate the order placement process.
-Select Address Page: Developed a page displaying all user addresses with an option to select a delivery address.
-Address Retrieval: Created a backend endpoint to fetch all addresses associated with a user.
-
-## Milestone 24: Order Summary and Confirmation
-Order Summary: Displayed all products included in the order along with selected delivery address and total cart value.
-Place Order Button: Implemented a final confirmation button to place the order, completing the purchase process.
-
-## Milestone 25: Backend Endpoint for Placing Orders
-Created an API endpoint to receive user, product, and address details, retrieve user _id via email, and store individual product orders with the same address in the MongoDB orders collection.
-
-## Milestone 26: Fetch User Orders Endpoint
-Built an API endpoint to fetch all orders of a user by retrieving their _id using their email and sending all associated orders in the response.
