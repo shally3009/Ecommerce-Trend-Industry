@@ -51,6 +51,24 @@ orderrouter.get('/getorder', auth, async(req, res)=>{
     }catch(err){
         console.log(err)
     }
+    orderrouter.patch('/cancel-order/:orderId',auth,async(req,res)=>{
+        try{
+            const{orderId} = req.params;
+            const order = await orders.findById(orderId);
+            console.log(order);
+            if(!order){
+                return res.status(400).json({message:"Order not found"});
+            }
+            if(order.orderStatus ==['Delivered']){
+                res.status(404).json({message:"Order is already deliverd"});
+            }
+            order.orderStatus =['Cancelled'];
+            await order.save();
+            res.status(200).json({message:"Order cancelled successfully"});
+        }catch(error){
+            console.error("Error cancelling order",error);
+            res.status(500).json({message:error.message});
+        }    
 })
 
 module.exports=orderrouter;
