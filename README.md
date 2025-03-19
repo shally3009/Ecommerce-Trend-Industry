@@ -1,42 +1,48 @@
+E-Commerce Platform: Backend Web Development Project
+Milestone 1: Project Introduction
+Project Overview: This project focuses on building a fully operational e-commerce platform using the MERN stack — MongoDB, Express, React, and Node.js. The front-end will be developed with React’s Create React App (CRA), MongoDB will serve as the database, and Node.js with Express will manage back-end server functionality.
 
-# Ecommerce TrendIndustry
+The project will be divided into two major sections: Frontend and Backend development.
 
-Welcome to the **Ecommerce TrendIndustry** repository! This project is designed to guide you through the development of a fully functional ecommerce platform, providing hands-on experience in building real-world applications using modern web technologies.
+Frontend: Various user-facing pages will be created, including:
 
-## Project Description
+Login Page
+Sign Up Page
+Forgot Password Page
+Home Page
+Product Listing Page
+Cart Page
+Address Form Page
+Payment Page
+Order Confirmation Page
+Order History Page
+Help Page
+Error Page
+Product Details Page
+Backend: The server will manage data operations with MongoDB using Mongoose for schema consistency. API endpoints will handle CRUD operations (Create, Read, Update, Delete) through HTTP methods like POST, GET, PUT, PATCH, and DELETE.
 
-The purpose of this project is to build an ecommerce website that users can interact with, featuring common ecommerce functionality such as product listings, shopping cart, checkout process, and user authentication. The project will be built incrementally, with each milestone adding a new set of features.
+We will use bcrypt to hash user passwords for added security, and the project structure will prioritize scalability and maintainability.
 
-Throughout this project, you will gain experience in:
-- Front-end development (HTML, CSS, JavaScript)
-- Back-end development (Node.js, Express, databases)
-- Version control using Git and GitHub
-- Setting up a full-stack web application
+Milestone 2: Frontend Setup (Login Page)
+In this milestone, the Login Page was built using React’s CRA. For an improved interface, Tailwind CSS was integrated for styling and React-Icons for visual enhancements. Tailwind’s utility-first approach ensures a responsive and modern design.
 
-The project will be broken down into milestones that focus on specific features and functionality. By the end of this project, you will have a working ecommerce platform and a strong understanding of how to develop such systems.
+The Login Page includes fields for email and password, form validation, state management, and error handling. Icons enhance usability and the overall experience.
 
-## Milestone 1: Project Overview
+Milestone 3: Backend Setup and Project Structure
+We established the foundational structure for the backend as follows:
 
-In this first session, we focused on the foundational steps required to kickstart the project:
+src/ Directory: Contains server-side source files.
+config/: Holds environment configuration like MongoDB URL and port.
+controllers/: Handles request logic for different routes.
+database/: Connects to MongoDB via db.js.
+middleware/: Contains custom middleware like centralized error handling.
+models/: Defines Mongoose schemas.
+routes/: Sets up API endpoints.
+utils/: Includes helper functions like ErrorHandler.js.
+The index.js file sets up the Express app, basic routing, and server listener.
 
-- **Planning**: We discussed the project’s structure and planned out the necessary components, such as product catalogs, user authentication, and payment processing.
-- **Technologies**: We reviewed the tools and technologies that will be used in the project, including:
-  - Front-end: HTML, CSS, JavaScript (with potential frameworks like React or Vue.js)
-  - Back-end: Node.js with Express for creating APIs
-  - Database: MongoDB or SQL database to store product and user data
-- **Repository Setup**: We created the GitHub repository to manage the codebase and track progress.
-- **Version Control**: Introduction to Git and how we will manage project changes using branches, commits, and pull requests.
+Milestone 4: User Model, Controller, and Multer Integration
+We created the User Model and its controller, then integrated Multer for handling file uploads.
 
-This session served as the groundwork for the following milestones and gave an overview of how the project will evolve.
-
-## Features to be Implemented
-
-Here’s a high-level list of features that will be included as the project progresses:
-
-1. **User Authentication**: Allow users to create accounts, log in, and manage their profiles.
-2. **Product Catalog**: Display a collection of products with sorting and filtering options.
-3. **Shopping Cart**: Enable users to add products to their cart and manage the cart's contents.
-4. **Checkout Process**: Implement a checkout process where users can enter shipping information and complete their purchase.
-5. **Payment Integration**: Integrate with a payment provider (e.g., Stripe or PayPal) to process payments securely.
-6. **Admin Panel**: Create an admin panel where administrators can manage products, orders, and users.
-
+Milestone 5: Missing Number Task (Small Task)
+This milestone focused on solving the missing number problem in an array.
