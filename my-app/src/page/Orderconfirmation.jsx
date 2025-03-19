@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import NavBar from '../components/auth/nav';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 const OrderConfirmation = () => {
     const location = useLocation();
@@ -29,7 +30,7 @@ const OrderConfirmation = () => {
                 const address = addressData.addresses.find(addr => addr._id === addressId);
                 if (!address) {
                     throw new Error('Selected address not found.');
-                }
+                }  
                 setSelectedAddress(address);
                 // Fetch cart products from /cartproducts endpoint
                 const cartResponse = await axios.get('http://localhost:3000//product/getcart', {
@@ -44,7 +45,7 @@ const OrderConfirmation = () => {
                     _id: item.productId._id,
                     name: item.productId.name,
                     price: item.productId.price,
-                    images: item.productId.images.map(imagePath => `http://localhost:3000${imagePath}`),
+                    images: item.productId.images.map(imagePath => http://localhost:3000${imagePath}),
                     quantity: item.quantity,
                 }));
                 setCartItems(processedCartItems);
@@ -112,7 +113,7 @@ const OrderConfirmation = () => {
                         {selectedAddress ? (
                             <div className='p-4 border rounded-md'>
                                 <p className='font-medium'>
-                                    {selectedAddress.address1}{selectedAddress.address2 ? `, ${selectedAddress.address2}` : ''}, {selectedAddress.city}, {selectedAddress.state}, {selectedAddress.zipCode}
+                                    {selectedAddress.address1}{selectedAddress.address2 ? , ${selectedAddress.address2} : ''}, {selectedAddress.city}, {selectedAddress.state}, {selectedAddress.zipCode}
                                 </p>
                                 <p className='text-sm text-gray-600'>{selectedAddress.country}</p>
                                 <p className='text-sm text-gray-500'>Type: {selectedAddress.addressType || 'N/A'}</p>
@@ -160,6 +161,16 @@ const OrderConfirmation = () => {
                         <div className='p-4 border rounded-md'>
                             <p>Cash on Delivery</p>
                         </div>
+                        <PayPalScriptProvider options={{ clientId: "ARgVb1EUjy5w_27pHfW9LGrJkM11nesQ0JOOaHrV-7Ir3atdmLnt2mLD6nTKT6gn0UJ_YusVTeKlagny" }}>
+                            <PayPalButtons style={{ layout: "horizontal" }}
+                            createOrder={(data,actions)=>{
+                                return actions.order.create({purchase_units:[{amount:{value:totalPrice.toFixed(2)}}]})
+                            }}
+                            onApprove={(data,actions)=>{
+                                return actions.order.capture()
+                            }}
+                            >Pay with PayPal</PayPalButtons>
+                            </PayPalScriptProvider>
                     </div>
                     {/* Place Order Button */}
                     <div className='flex justify-center'>
