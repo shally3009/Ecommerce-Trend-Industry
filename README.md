@@ -1,5 +1,6 @@
 E-Commerce Platform: Backend Web Development Project
-Milestone 1: Project Introduction
+
+## Milestone 1: Project Introduction
 Project Overview: This project focuses on building a fully operational e-commerce platform using the MERN stack — MongoDB, Express, React, and Node.js. The front-end will be developed with React’s Create React App (CRA), MongoDB will serve as the database, and Node.js with Express will manage back-end server functionality.
 
 The project will be divided into two major sections: Frontend and Backend development.
@@ -23,12 +24,12 @@ Backend: The server will manage data operations with MongoDB using Mongoose for 
 
 We will use bcrypt to hash user passwords for added security, and the project structure will prioritize scalability and maintainability.
 
-Milestone 2: Frontend Setup (Login Page)
+## Milestone 2: Frontend Setup (Login Page)
 In this milestone, the Login Page was built using React’s CRA. For an improved interface, Tailwind CSS was integrated for styling and React-Icons for visual enhancements. Tailwind’s utility-first approach ensures a responsive and modern design.
 
 The Login Page includes fields for email and password, form validation, state management, and error handling. Icons enhance usability and the overall experience.
 
-Milestone 3: Backend Setup and Project Structure
+## Milestone 3: Backend Setup and Project Structure
 We established the foundational structure for the backend as follows:
 
 src/ Directory: Contains server-side source files.
@@ -41,8 +42,8 @@ routes/: Sets up API endpoints.
 utils/: Includes helper functions like ErrorHandler.js.
 The index.js file sets up the Express app, basic routing, and server listener.
 
-Milestone 4: User Model, Controller, and Multer Integration
+## Milestone 4: User Model, Controller, and Multer Integration
 We created the User Model and its controller, then integrated Multer for handling file uploads.
 
-Milestone 5: Missing Number Task (Small Task)
+## Milestone 5: Missing Number Task (Small Task)
 This milestone focused on solving the missing number problem in an array.
