@@ -1,0 +1,7 @@
+{
+  "name": "ecommerce-trend-industry",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite"
+  }
+}
