@@ -1,5 +1,6 @@
 const express=require('express');
 const connectDB = require('./src/Database/db');
+const cors=require('cors');
 const userrouter = require('./src/Controller/user');
 const { get } = require('mongoose');
 const productrouter = require('./src/Controller/Product');
